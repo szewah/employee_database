@@ -3,8 +3,6 @@ body {
 }
 
 h1 {
-    position: relative;
-    margin-top: 30px;
     text-align: center;
 }
 
@@ -17,7 +15,7 @@ input {
     background-color: bisque;
 }
 header { 
-    padding: 20px;
+    padding: 50px;
     background-image: linear-gradient(to top, rgb(127,48,16), rgb(235,142,104), rgb(216, 142, 112));
 }
 
