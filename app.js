@@ -46,15 +46,15 @@ database.ref().on('child_added', function(snapshot) {
   function(errorObject) {
     console.log("Errors handled: " + errorObject.code)
   });
-
-    // var tableDiv = $("<div>");
-    // var tableName = $("<p>").text(formName);
-    // var tableRole = $("<p>").text(formRole);
-    // var tableStartDate = $("<p>").text(formStartDate);
-    // var tableSalary = $("<p>").text(formSalary);
-    // tableDiv.append(tableName, tableRole, tableStartDate, tableSalary);
-    // $(".table").append(tableDiv);
-
+  
 function renderRow() {
-    
-}
+    var tableRow = $("<tr class='table-row'>");
+    var tableDataName = $("<td>").attr('.employee-name');
+    var tableDataRole = $("<td>").attr('.role');
+    var tableStartDate = $("<td>").attr('.state-date');
+    var tableTotalBilled = $("<td>").attr('.total-billed');
+    tableRow.append(tableDataName, tableDataRole, tableStartDate, tableTotalBilled);
+    $(".table").append(tableRow);
+};
+
+renderRow() 
