@@ -26,7 +26,7 @@ $("#add-employee").on('click', function() {
     formStartDate = $("#start-date").val();
     formSalary = $("#monthly-salary").val();
 
-    database.ref().set({
+    database.ref().push({
         formName: formName,
         formRole: formRole,
         formStartDate: formStartDate,
@@ -36,7 +36,7 @@ $("#add-employee").on('click', function() {
 
 });
 
-database.ref().on('value', function(snapshot) {
+database.ref().on('child_added', function(snapshot) {
     $(".employee-name").text(snapshot.val().formName);
     $(".role").text(snapshot.val().formRole);
     $(".start-date").text(snapshot.val().formStartDate);
@@ -47,7 +47,6 @@ database.ref().on('value', function(snapshot) {
     console.log("Errors handled: " + errorObject.code)
   });
 
-
     // var tableDiv = $("<div>");
     // var tableName = $("<p>").text(formName);
     // var tableRole = $("<p>").text(formRole);
@@ -55,3 +54,7 @@ database.ref().on('value', function(snapshot) {
     // var tableSalary = $("<p>").text(formSalary);
     // tableDiv.append(tableName, tableRole, tableStartDate, tableSalary);
     // $(".table").append(tableDiv);
+
+function renderRow() {
+    
+}
