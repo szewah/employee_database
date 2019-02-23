@@ -37,24 +37,20 @@ $("#add-employee").on('click', function() {
 });
 
 database.ref().on('child_added', function(snapshot) {
-    $(".employee-name").text(snapshot.val().formName);
-    $(".role").text(snapshot.val().formRole);
-    $(".start-date").text(snapshot.val().formStartDate);
-    $(".total-billed").text(snapshot.val().formSalary);
+    renderRow(snapshot.val()); 
   },     
   // Create Error Handling
   function(errorObject) {
     console.log("Errors handled: " + errorObject.code)
   });
   
-function renderRow() {
+function renderRow(obj) {
     var tableRow = $("<tr class='table-row'>");
-    var tableDataName = $("<td>").attr('.employee-name');
-    var tableDataRole = $("<td>").attr('.role');
-    var tableStartDate = $("<td>").attr('.state-date');
-    var tableTotalBilled = $("<td>").attr('.total-billed');
+    var tableDataName = $("<td class='employee-name'>").text(obj.formName);
+    var tableDataRole = $("<td class='role'>").text(obj.formRole);
+    var tableStartDate = $("<td class='start-date'>").text(obj.formStartDate);
+    var tableTotalBilled = $("<td class='total-billed'>").text(obj.formSalary);
     tableRow.append(tableDataName, tableDataRole, tableStartDate, tableTotalBilled);
     $(".table").append(tableRow);
 };
 
-renderRow() 

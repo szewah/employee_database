@@ -1,0 +1,21 @@
+body {
+    background-color: lightgrey;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    padding: 5px 15px;
+    margin: 5px;
+    background-color: rgb(216, 142, 112);
+}
+input {
+    background-color: bisque;
+}
+header { 
+    padding: 50px;
+    background-image: linear-gradient(to top, rgb(127,48,16), rgb(235,142,104), rgb(216, 142, 112));
+}
+
