@@ -11,28 +11,34 @@
 <body>
 
 <div class="container">
-           <div class="row">
-               <div class="col-md-12">
-                    <form id="data-form">
-                            <label for="name">Name</label><br>
-                                <input id="name" placeholder="John Smith" type="text" id="name"><br>
-                              
-                            <label for="role">Role</label><br>
-                                <input id="role" placeholder="CEO" type="text" id="role"><br>
-                            
-                            <label for="start-date">Start Year</label><br>
-                                <input id="start-date" placeholder="01/08/1988" type="text" id="start-date"><br>
+    <div class="row">
+        <div class="table"></div>
+        <div class="col-md-12">
+            <form id="data-form">
+                <label for="name">Name</label><br>
+                    <input id="name" placeholder="John Smith" type="text"><br>
                     
-                            <label for="monthly-salary">Monthly Salary</label><br>
-                                <input id="monthly-salary" placeholder="20000" type="text" id="mothly-salary"><br>
-                    
-                            <button id="submit" type="submit" value="submit">Submit</button>
-                            <button id="reset" type="reset" value="reset">Reset</button>
-                    </form>
-               </div>
-           </div>
-       </div>
+                <label for="role">Role</label><br>
+                    <input id="role" placeholder="CEO" type="text"><br>
+                
+                <label for="start-date">Start Year</label><br>
+                    <input id="start-date" placeholder="01/08/1988" type="text"><br>
+        
+                <label for="monthly-salary">Monthly Salary</label><br>
+                    <input id="monthly-salary" placeholder="20000" type="text"><br>
+        
+                <button id="add-employee" type="submit" value="submit">Submit</button>
+                <button id="reset" type="reset" value="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>
 
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+
+<script src="app.js"></script>
 </body>
 </html>
