@@ -9,9 +9,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<header>
+    <h1>Employee Data Manager</h1>
+</header>
 <div class="container">
-        <div class="table"></div>
+        <div class="table">
+            <table class="table table-striped" align="center">
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Role</th>
+                    <th>Start Date</th>
+                    <th>Monthly Salary</th>
+                    <th>Months worked</th>
+                    <th>Total billed ($)</th>
+                </tr>
+                <tr>
+                    <td class="employee-name"></td>
+                    <td class="role"></td>
+                    <td class="start-date"></td>
+                    <td class="monthly-salary"></td>
+                    <td class="months worked"></td>
+                    <td class="total-billed"></td>
+                </tr>
+            </table>
+
+        </div>
            <div class="row">
                <div class="col-md-12">
                     <form id="data-form">
