@@ -10,16 +10,15 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-
 var formName;
 var formRole;
 var formStartDate;
 var formSalary;
+var monthsWorked;
+var totalBill;
 
 $("#add-employee").on('click', function() {
     event.preventDefault();
-
-    //store value of most recent user;
     console.log("I was clicked");
     formName = $("#name").val();
     formRole = $("#role").val();
@@ -30,10 +29,11 @@ $("#add-employee").on('click', function() {
         formName: formName,
         formRole: formRole,
         formStartDate: formStartDate,
-        formSalary: formSalary
+        formSalary: formSalary,
+        // formMonthsWorked: monthsWorked,
+        // formTotalBilled: totalBill
       }); 
-
-
+      calculateSalary();
 });
 
 database.ref().on('child_added', function(snapshot) {
@@ -49,8 +49,31 @@ function renderRow(obj) {
     var tableDataName = $("<td class='employee-name'>").text(obj.formName);
     var tableDataRole = $("<td class='role'>").text(obj.formRole);
     var tableStartDate = $("<td class='start-date'>").text(obj.formStartDate);
-    var tableTotalBilled = $("<td class='total-billed'>").text(obj.formSalary);
-    tableRow.append(tableDataName, tableDataRole, tableStartDate, tableTotalBilled);
+    var tableSalary = $("<td class='salary'>").text(obj.formSalary);
+    // var tableMonthsWorked= $("<td class='months-worked'>").text(obj.formMonthsWorked);
+    // var tableTotalBilled= $("<td class='total-billed'>").text(obj.formTotalBilled);
+    tableRow.append(tableDataName, tableDataRole, tableStartDate, tableSalary);
     $(".table").append(tableRow);
 };
+
+// function dateConversion() {
+  
+// }
+
+function calculateSalary() {
+    var startDate = $("#start-date").val();
+    var dateFormat = "MM-DD-YYYY";
+    var convertedDate = moment(startDate, dateFormat);
+    var workingDuration = convertedDate.diff(moment(), "months");
+    var positiveDuration = Math.abs(workingDuration);
+    console.log(positiveDuration);
+    var formSalary = $("#monthly-salary").val();
+    var totalSalary = positiveDuration * formSalary;
+    console.log(totalSalary);
+};
+
+// 1. how to push the date difference into the table
+
+
+
 
