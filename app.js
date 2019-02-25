@@ -1,10 +1,5 @@
 var config = {
-    apiKey: "AIzaSyA2vZH3EegVXUPAw3AOknEGYOu8auYv3uE",
-    authDomain: "fabulous-project-demo.firebaseapp.com",
-    databaseURL: "https://fabulous-project-demo.firebaseio.com",
-    projectId: "fabulous-project-demo",
-    storageBucket: "fabulous-project-demo.appspot.com",
-    messagingSenderId: "322665992078"
+
   };
 
 firebase.initializeApp(config);
