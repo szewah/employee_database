@@ -19,3 +19,7 @@ header {
     background-image: linear-gradient(to top, rgb(127,48,16), rgb(235,142,104), rgb(216, 142, 112));
 }
 
+.table-row:hover {
+    cursor: pointer;
+};
+

@@ -12,10 +12,10 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 </head>
 <body>
-<header>
+    <header>
     <h1>Employee Data Manager</h1>
-</header>
-<div class="container">
+    </header>
+    <div class="container">
         <div class="tableDiv">
             <table id="employee-table" class="table table-striped align-center">
                 <tr>
@@ -27,32 +27,31 @@
                     <th>Total billed ($)</th>
                 </tr>
             </table>
-
         </div>
-           <div class="row">
-               <div class="col-md-12">
-                    <form id="data-form">
-                            <label for="name">Name</label><br>
-                                <input id="name" placeholder="John Smith" type="text"><br>
-                              
-                            <label for="role">Role</label><br>
-                                <input id="role" placeholder="CEO" type="text"><br>
-                            
-                            <label for="start-date">Start Year</label><br>
-                                <input id="start-date" placeholder="01/08/1988" type="text"><br>
-                    
-                            <label for="monthly-salary">Monthly Salary</label><br>
-                                <input id="monthly-salary" placeholder="20000" type="text"><br>
-                    
-                            <button id="add-employee" type="submit" value="submit">Submit</button>
-                            <button id="reset" type="reset" value="reset">Reset</button>
-                    </form>
-               </div>
-           </div>
-       </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="data-form">
+                    <label for="name">Name</label><br>
+                    <input id="name" placeholder="John Smith" type="text"><br>
+                        
+                    <label for="role">Role</label><br>
+                    <input id="role" placeholder="CEO" type="text"><br>
+            
+                    <label for="start-date">Start Year</label><br>
+                    <input id="start-date" placeholder="01/08/1988" type="text"><br>
+            
+                    <label for="monthly-salary">Monthly Salary</label><br>
+                    <input id="monthly-salary" placeholder="20000" type="text"><br>
+            
+                    <button id="add-employee" type="submit" value="submit">Submit</button>
+                    <button id="reset" type="reset" value="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
        
-       <script src="app.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>

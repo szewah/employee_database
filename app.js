@@ -1,5 +1,6 @@
 //Firebase key
 
+
 //Initialize the key
 firebase.initializeApp(config);
 //Assign it to a variable database
@@ -76,6 +77,11 @@ function calculateSalary(date, salary) {
     return [positiveDuration, totalSalary]
 };
 
+  $("body").on("click", ".table-row", function() {
+    $(this).remove();
+    firebase.database().ref().remove();
+    // return false;
+  });
 
 
 
